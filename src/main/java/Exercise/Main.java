@@ -1,15 +1,25 @@
 package Exercise;
+import java.util.Scanner;
+
+
 
 public class Main {
     public static void main(String[] args) {
         // User details
         String name = "Jerry";
         String account = "BO10006789";
-
+        System.out.println("Hola");
+        showWelcome(name, account);
+        showMenu();
+        getKey();
+    }
+    public static void showWelcome(String name, String account){
         // Welcome to the BankApp
         System.out.println("Welcome " + name);
         System.out.println("Your current account is " + account);
+    }
 
+    public static void showMenu(){
         // Main Menu
         System.out.println(System.lineSeparator());
         System.out.println("********************");
@@ -19,7 +29,9 @@ public class Main {
         System.out.println("(T) My Transactions");
         System.out.println("(E) Exit");
         System.out.println("********************");
+    }
 
+    public static void getKey(){
         // Press a key to select an option
         try (Scanner scanner = new Scanner(System.in)) {
             char option;
